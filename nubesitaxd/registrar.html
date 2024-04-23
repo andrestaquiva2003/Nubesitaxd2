@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="Css/registro.css">
+</head>
+<body>
+    <div class="formulario">
+        <h1>Registrar nuevo usuario</h1>
+        
+        <!-- Campo de Nombre -->
+        <div class="usuario">
+            <label for="nombre">
+                <span class="content-name">Nombre completo</span>
+                <input type="text" id="nombre" autocomplete="off" required>
+                <span></span>
+            </label>
+        </div>
+        
+        <!-- Campo de Correo Electrónico -->
+        <div class="Correo">
+            <label for="edtuser">
+                <span class="content-name">Correo</span>
+                <input type="email" id="edtuser" autocomplete="off" required>
+                <span></span>
+            </label>
+        </div>
+        
+        <!-- Campo de Confirmación de Correo Electrónico -->
+        <div class="Correo">
+            <label for="edtconfirmuser">
+                <span class="content-name">Confirmar correo</span>
+                <input type="text" id="edtconfirmuser" autocomplete="off" required>
+                <span></span>
+            </label>
+        </div>
+        
+        <!-- Campo de Contraseña -->
+        <div class="contraseña">
+            <label for="edtpassword">
+                <span class="content-name">Contraseña</span>
+                <div class="contenedor1">
+                    <input type="password" id="edtpassword" placeholder="Ingrese clave">
+                    <img src="./multimedia/eye_close.png" id="eyeicon">
+                </div>
+                <span></span>
+            </label>
+        </div>
+        
+        <!-- Campo de Confirmación de Contraseña -->
+        <div class="contraseña">
+            <label for="edtconfirmarpassword">
+                <span class="content-name">Confirmar contraseña</span>
+                <div class="contenedor1">
+                    <input type="password" id="edtconfirmarpassword" placeholder="Confirme la contraseña">
+                    <img src="./multimedia/eye_close.png" id="eyeicon2">
+                </div>
+                <span></span>
+            </label>
+        </div>
+        
+        <!-- Botón de Registro -->
+        <button id="registerBtn">Registrar</button>
+        
+        <!-- Enlace para Iniciar Sesión -->
+        <div class="Iniciar">
+            <p class="message">¿Ya tienes una cuenta? <a href="login.html">Iniciar sesión</a></p>
+        </div>
+    </div>
+    
+    <!-- Scripts JavaScript -->
+    <script src="mostrarcont.js"></script>
+    <script src="confirmacionregister.js"></script>
+</body>
+</html>
+
+
+        
+<script src="mostrarcont.js"></script>
+<script src="confirmacionregister.js"></script>
+</body>
+</html>

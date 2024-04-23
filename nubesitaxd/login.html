@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="valition.css">
+    <!-- Agregar fontawesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="formulario">
+        <h1>Inicio de sesión</h1>
+
+        <div class="usuario">
+            <label>
+                <span class="content-name">Correo</span>
+                <input type="email" id="edtuser" placeholder="Email" autocomplete="off" required>
+                <span></span>
+            </label>
+        </div>
+
+        <div class="contraseña">
+            <label>
+                <span class="content-name">Contraseña</span>
+                <div class="contenedor1">
+                    <input type="password" id="edtpassword" placeholder="Ingrese clave">
+                    <span></span>
+                    <img src="./multimedia/eye_close.png" id="eyeicon">
+                </div>
+            </label>
+        </div>
+        <div class="recordar"><a href="passwordchange.html">¿Olvidaste tu contraseña?</a></div>
+
+        <!-- Botones de inicio de sesión con iconos -->
+        <div class="oauth-buttons">
+            <button id="google-signin-btn"><i class="fab fa-google"></i> Iniciar sesión con Google</button>
+            <button id="facebook-signin-btn"><i class="fab fa-facebook"></i> Iniciar sesión con Facebook</button>
+        </div>        
+
+        <button type="submit" id="loginbtn">Iniciar</button>
+        <a href="home.html"></a>
+        
+        <div class="registrarme">
+            <p class="message">¿Aún no tienes una cuenta? <a href="registrar.html">Registrarse</a></p>
+        </div>
+    </div>
+
+    <script src="mostrarcont.js"></script>
+    <script src="authentication.js"></script>
+    <script src="validation.js"></script>
+
+    <!-- Script para integrar la autenticación con Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+    <script src="bower_components/firebaseui/dist/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="bower_components/firebaseui/dist/firebaseui.css" />
+
+    <!-- Scripts para integrar la autenticación con Google y Facebook -->
+    <script>
+        // Función para iniciar sesión con Google
+        document.getElementById('google-signin-btn').addEventListener('click', function() {
+            // Aquí deberías agregar el código para iniciar sesión con Google
+            // Puedes utilizar la API de Google Sign-In: https://developers.google.com/identity/sign-in/web/sign-in
+            console.log('Iniciando sesión con Google...');
+        });
+
+        // Función para iniciar sesión con Facebook
+        document.getElementById('facebook-signin-btn').addEventListener('click', function() {
+            // Aquí deberías agregar el código para iniciar sesión con Facebook
+            window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+            console.log('Iniciando sesión con Facebook...');
+        });
+    </script>
+</body>
+</html>

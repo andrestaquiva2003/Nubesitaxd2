@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="Css/home.css">
+
+</head>
+<body>
+    <header>
+        <div class="back">
+            <div class="menu container">
+                <a href="#" class="logo"> Fire Store shoping </a>
+                <input type="checkbox" id="menu">
+                <label for="menu">
+                    <img src="multimedia/menu.png" class="manu-icono" alt="">
+                </label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#">INICIO</a></li>
+                        <li><a href="#">SERVIDORES</a></li>
+                        <li><a href="#">PRODUCTOS</a></li>
+                        <li><a href="#">CONTACTOS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="formulario">
+            <button type="button" id="logoutBtn">Cerrar Sesión</button>
+        </div>
+    </header>
+
+    <div class="eliminar-cuenta">
+        <p><a href="#" id="eliminarCuentaLink"> <span style="color: rgb(233, 233, 233);">¿Deseas eliminar tu cuenta?</span> </a></p>
+    </div>
+    
+    <!-- Mensaje y ventana de confirmación -->
+    <script>
+        document.getElementById("logoutBtn").addEventListener("click", function() {
+            // Redireccionar a la página de login
+            window.location.href = "login.html";
+        });
+
+        document.getElementById("eliminarCuentaLink").addEventListener("click", function(event) {
+            event.preventDefault(); // Evita que el enlace recargue la página
+            if (confirm("¿Estás seguro de eliminar tu cuenta?")) {
+                // Redireccionar a la página de login
+                alert("cuenta eliminada exitosamente xd!");
+                window.location.href = "login.html";
+            } else {
+                // Si el usuario selecciona "Cancelar"
+                alert("Operación cancelada.");
+            }
+        });
+    </script>
+</body>
+</html>
