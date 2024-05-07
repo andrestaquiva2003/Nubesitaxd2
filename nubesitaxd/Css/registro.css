@@ -19,8 +19,23 @@ body {
 .formulario h1 {
     text-align: center;
     font-size: 1.5em;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid rgb(192, 192, 192);
     margin-bottom: 20px;
+}
+.centered-buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-container {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-google-container,
+.btn-facebook-container {
+    border-radius: 20px; 
+    overflow: hidden; 
 }
 
 .usuario,
@@ -28,6 +43,19 @@ body {
 .contraseña {
     margin-bottom: 20px;
 }
+#btn_register {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: linear-gradient(250deg, #4c719b, #000000);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 600;
+}
+
 
 .usuario input,
 .Correo input,
